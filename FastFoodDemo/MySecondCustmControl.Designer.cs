@@ -49,6 +49,7 @@
             this.vac1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.radCalendar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             // 
             // enfCmb
             // 
+            this.enfCmb.Enabled = false;
             this.enfCmb.FormattingEnabled = true;
             this.enfCmb.ItemHeight = 23;
             this.enfCmb.Location = new System.Drawing.Point(3, 3);
@@ -271,10 +273,24 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(428, 4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(28, 28);
+            this.button9.TabIndex = 27;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // MySecondCustmControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.prof);
             this.Controls.Add(this.label4);
@@ -307,7 +323,6 @@
         private Telerik.WinControls.UI.RadCalendar radCalendar1;
         private Telerik.WinControls.Themes.FluentTheme fluentTheme1;
         private Telerik.WinControls.Themes.FluentDarkTheme fluentDarkTheme1;
-        private MetroFramework.Controls.MetroComboBox enfCmb;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
@@ -324,5 +339,7 @@
         private System.Windows.Forms.Label vac1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button9;
+        public MetroFramework.Controls.MetroComboBox enfCmb;
     }
 }

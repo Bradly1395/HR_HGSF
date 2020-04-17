@@ -95,7 +95,7 @@ namespace FastFoodDemo
             Mantenimiento bol = new Mantenimiento();
             if(bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Ordinaria'") ==false)
             {
-                MessageBox.Show("No tiene vacaciones ordinarias asignadas");
+                //MessageBox.Show("No tiene vacaciones ordinarias asignadas");
                 vac1.Text = "--/--/----";
                 prof.Text = "--/--/----";
             }
@@ -181,6 +181,12 @@ namespace FastFoodDemo
             ConvenioEnf x = new ConvenioEnf(this);
             x.nombre.Text = enfCmb.Text;
             x.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            SelectorEnf x = new SelectorEnf(this);
+            x.ShowDialog();
         }
     }
 }
