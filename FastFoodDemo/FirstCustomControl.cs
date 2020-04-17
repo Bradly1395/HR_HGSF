@@ -77,6 +77,7 @@ namespace FastFoodDemo
         {
             Cursor.Current = Cursors.WaitCursor;
 
+            //Convenios Start
             conveniosTXT.Text = "";
 
             xd = Mantenimiento.returnInt("SELECT [IDEmpleado] FROM [Empleado] where [Nombre] ='" + docCmb.Text + "'");
@@ -86,7 +87,7 @@ namespace FastFoodDemo
             using (SqlConnection Cone = Conexion.generarConexion())
             {
                 Cone.Open();
-                SqlCommand comando = new SqlCommand("SELECT top 10 FechaInicio FROM Convenio where IDEmpleado = " + xd + " order by FechaInicio DESC", Cone);
+                SqlCommand comando = new SqlCommand("SELECT top 10 FechaInicio FROM Convenio where IDEmpleado = " + xd + "and month(FechaInicio) = month(GETDATE()) order by FechaInicio DESC", Cone);
 
                 Lect = comando.ExecuteReader();
 
@@ -97,7 +98,7 @@ namespace FastFoodDemo
                 }
                 Cone.Close();
             }
-
+            //ConveniosEnd
 
             //CalendarReset
             for (int i = radCalendar1.SpecialDays.Count - 1; i >= 0; i--)
@@ -143,7 +144,7 @@ namespace FastFoodDemo
                 {
                     if (bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica'") == false)
                     {
-                        MessageBox.Show("No tiene vacaciones profilacticas asignadas");
+                        //MessageBox.Show("No tiene vacaciones profilacticas asignadas");
                         prof.Text = "--/--/----";
                     }
                     else
@@ -227,7 +228,7 @@ namespace FastFoodDemo
 
         private void button7_Click(object sender, EventArgs e)
         {
-            int permPago = Mantenimiento.returnInt("select count(*) from Convenio where IDEmpleado = "+xd+"");
+            int permPago = Mantenimiento.returnInt("select count(*) from Convenio where month(FechaInicio) = month(GETDATE()) and IDEmpleado = " + xd+"");
 
             if (permPago >= 10)
             {

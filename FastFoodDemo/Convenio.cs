@@ -83,7 +83,7 @@ namespace FastFoodDemo
             {
                 if (string.IsNullOrWhiteSpace(servicio.Text) == false && string.IsNullOrWhiteSpace(companero.Text) == false && string.IsNullOrWhiteSpace(servicio2.Text) == false && string.IsNullOrWhiteSpace(motivo.Text) == false)
                 {
-                    int permPago = Mantenimiento.returnInt("select count(*) from Convenio where IDEmpleado = " + frm1.xd + " and CompromisoPago = 'PAGO MONETARIO'");
+                    int permPago = Mantenimiento.returnInt("select count(*) from Convenio where IDEmpleado = " + frm1.xd + " and CompromisoPago = 'PAGO MONETARIO' and month(FechaInicio) = month(GETDATE())");
 
                     if (permPago >= 5 && (pago.Checked == true))
                     {

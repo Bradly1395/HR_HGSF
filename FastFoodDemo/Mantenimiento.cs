@@ -188,7 +188,7 @@ namespace FastFoodDemo
         {
             using (SqlConnection sqlConnection = Conexion.generarConexion())
             {
-                SqlCommand sqlCmd = new SqlCommand("SELECT [Nombre] FROM [Empleado] where TipoEmpleado = 1", sqlConnection);
+                SqlCommand sqlCmd = new SqlCommand("SELECT [Nombre] FROM [Empleado] where TipoEmpleado = 1 order by Nombre", sqlConnection);
                 sqlConnection.Open();
                 SqlDataReader sqlReader = sqlCmd.ExecuteReader();
 
@@ -205,7 +205,7 @@ namespace FastFoodDemo
         {
             using (SqlConnection sqlConnection = Conexion.generarConexion())
             {
-                SqlCommand sqlCmd = new SqlCommand("SELECT [Nombre] FROM [Empleado] where TipoEmpleado = 2", sqlConnection);
+                SqlCommand sqlCmd = new SqlCommand("SELECT [Nombre] FROM [Empleado] where TipoEmpleado = 2 order by Nombre", sqlConnection);
                 sqlConnection.Open();
                 SqlDataReader sqlReader = sqlCmd.ExecuteReader();
 
@@ -222,7 +222,7 @@ namespace FastFoodDemo
         {
             using (SqlConnection sqlConnection = Conexion.generarConexion())
             {
-                SqlCommand sqlCmd = new SqlCommand("SELECT [Nombre] FROM [Empleado] where TipoEmpleado = 3", sqlConnection);
+                SqlCommand sqlCmd = new SqlCommand("SELECT [Nombre] FROM [Empleado] where TipoEmpleado = 3 order by Nombre", sqlConnection);
                 sqlConnection.Open();
                 SqlDataReader sqlReader = sqlCmd.ExecuteReader();
 
