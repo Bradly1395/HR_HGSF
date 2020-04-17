@@ -243,3 +243,4 @@ C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Debug\FastFoodDemo.csproj.CopyC
 C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Debug\FastFoodDemo.exe
 C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Debug\FastFoodDemo.pdb
 C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Debug\FastFoodDemo.SelectorEnf.resources
+C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Debug\FastFoodDemo.SelectorUser.resources

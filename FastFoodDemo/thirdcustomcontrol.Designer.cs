@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.vac1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.radCalendar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             // 
             // userCmb
             // 
+            this.userCmb.Enabled = false;
             this.userCmb.FormattingEnabled = true;
             this.userCmb.ItemHeight = 23;
             this.userCmb.Location = new System.Drawing.Point(3, 3);
@@ -258,10 +260,24 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "VACACIONES";
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(428, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(28, 28);
+            this.button9.TabIndex = 30;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // thirdcustomcontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.prof);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.vac1);
@@ -295,7 +311,6 @@
         private Telerik.WinControls.Themes.TelerikMetroTheme telerikMetroTheme1;
         private Telerik.WinControls.Themes.DesertTheme desertTheme1;
         private Telerik.WinControls.Themes.Office2013DarkTheme office2013DarkTheme1;
-        private MetroFramework.Controls.MetroComboBox userCmb;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
@@ -311,5 +326,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label vac1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button9;
+        public MetroFramework.Controls.MetroComboBox userCmb;
     }
 }
