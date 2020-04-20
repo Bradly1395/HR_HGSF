@@ -40,14 +40,16 @@
             this.nombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.fecha1 = new MetroFramework.Controls.MetroDateTime();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dias = new System.Windows.Forms.Label();
+            this.profs = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // prof
             // 
             this.prof.AutoSize = true;
             this.prof.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.prof.Location = new System.Drawing.Point(243, 326);
+            this.prof.Location = new System.Drawing.Point(243, 349);
             this.prof.Name = "prof";
             this.prof.Size = new System.Drawing.Size(153, 29);
             this.prof.TabIndex = 47;
@@ -59,7 +61,7 @@
             // 
             this.ord.AutoSize = true;
             this.ord.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.ord.Location = new System.Drawing.Point(243, 282);
+            this.ord.Location = new System.Drawing.Point(243, 305);
             this.ord.Name = "ord";
             this.ord.Size = new System.Drawing.Size(127, 29);
             this.ord.TabIndex = 46;
@@ -71,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 303);
+            this.label2.Location = new System.Drawing.Point(153, 326);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 25);
             this.label2.TabIndex = 45;
@@ -119,7 +121,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 223);
+            this.label4.Location = new System.Drawing.Point(25, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 25);
             this.label4.TabIndex = 38;
@@ -127,7 +129,7 @@
             // 
             // fecha2
             // 
-            this.fecha2.Location = new System.Drawing.Point(243, 220);
+            this.fecha2.Location = new System.Drawing.Point(243, 264);
             this.fecha2.MinimumSize = new System.Drawing.Size(0, 29);
             this.fecha2.Name = "fecha2";
             this.fecha2.Size = new System.Drawing.Size(230, 29);
@@ -157,7 +159,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 167);
+            this.label1.Location = new System.Drawing.Point(49, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 25);
             this.label1.TabIndex = 34;
@@ -165,28 +167,50 @@
             // 
             // fecha1
             // 
-            this.fecha1.Location = new System.Drawing.Point(243, 164);
+            this.fecha1.Location = new System.Drawing.Point(243, 208);
             this.fecha1.MinimumSize = new System.Drawing.Size(0, 29);
             this.fecha1.Name = "fecha1";
             this.fecha1.Size = new System.Drawing.Size(230, 29);
             this.fecha1.TabIndex = 33;
             // 
-            // label6
+            // dias
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(238, 119);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 25);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "0 DIAS";
+            this.dias.AutoSize = true;
+            this.dias.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dias.Location = new System.Drawing.Point(238, 119);
+            this.dias.Name = "dias";
+            this.dias.Size = new System.Drawing.Size(67, 25);
+            this.dias.TabIndex = 48;
+            this.dias.Text = "0 DIAS";
             // 
-            // vacaciones
+            // profs
+            // 
+            this.profs.AutoSize = true;
+            this.profs.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profs.Location = new System.Drawing.Point(238, 166);
+            this.profs.Name = "profs";
+            this.profs.Size = new System.Drawing.Size(67, 25);
+            this.profs.TabIndex = 52;
+            this.profs.Text = "0 DIAS";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(60, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(149, 25);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "PROFILACTICAS:";
+            // 
+            // vacaciones2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 475);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.profs);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dias);
             this.Controls.Add(this.prof);
             this.Controls.Add(this.ord);
             this.Controls.Add(this.label2);
@@ -199,7 +223,7 @@
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fecha1);
-            this.Name = "vacaciones";
+            this.Name = "vacaciones2";
             this.Text = "Agregar Vacaciones";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.vacaciones_Load);
@@ -222,6 +246,8 @@
         public System.Windows.Forms.Label nombre;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroDateTime fecha1;
-        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label dias;
+        public System.Windows.Forms.Label profs;
+        private System.Windows.Forms.Label label7;
     }
 }
