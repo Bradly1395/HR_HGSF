@@ -41,7 +41,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.permiso = new System.Windows.Forms.Label();
             this.incapacidad = new System.Windows.Forms.Label();
             this.prof = new System.Windows.Forms.Label();
@@ -50,6 +49,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.conveniosTXT = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.radCalendar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,18 +176,6 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "PERMISOS ESTE MES";
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.button8.Enabled = false;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
-            this.button8.Location = new System.Drawing.Point(4, 202);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(373, 280);
-            this.button8.TabIndex = 19;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // permiso
             // 
             this.permiso.AutoSize = true;
@@ -286,10 +275,39 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // conveniosTXT
+            // 
+            this.conveniosTXT.AutoSize = true;
+            this.conveniosTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.conveniosTXT.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conveniosTXT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.conveniosTXT.Location = new System.Drawing.Point(87, 235);
+            this.conveniosTXT.Name = "conveniosTXT";
+            this.conveniosTXT.Size = new System.Drawing.Size(63, 23);
+            this.conveniosTXT.TabIndex = 29;
+            this.conveniosTXT.Text = "TEXTO";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.button8.Enabled = false;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(4, 202);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(373, 280);
+            this.button8.TabIndex = 28;
+            this.button8.Text = "CONVENIOS";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // MySecondCustmControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.conveniosTXT);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.prof);
@@ -298,7 +316,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.permiso);
             this.Controls.Add(this.incapacidad);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
@@ -331,7 +348,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button8;
         public System.Windows.Forms.Label permiso;
         public System.Windows.Forms.Label incapacidad;
         private System.Windows.Forms.Label prof;
@@ -341,5 +357,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
         public MetroFramework.Controls.MetroComboBox enfCmb;
+        public System.Windows.Forms.Label conveniosTXT;
+        private System.Windows.Forms.Button button8;
     }
 }

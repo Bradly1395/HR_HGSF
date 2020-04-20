@@ -42,15 +42,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.permiso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.incapacidad = new System.Windows.Forms.Label();
-            this.prof = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.vac1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.radCalendar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,18 +162,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "INCAPACIDADES";
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.button8.Enabled = false;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
-            this.button8.Location = new System.Drawing.Point(4, 146);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(373, 336);
-            this.button8.TabIndex = 20;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // permiso
             // 
             this.permiso.AutoSize = true;
@@ -211,30 +197,6 @@
             this.incapacidad.Size = new System.Drawing.Size(27, 29);
             this.incapacidad.TabIndex = 24;
             this.incapacidad.Text = "0";
-            // 
-            // prof
-            // 
-            this.prof.AutoSize = true;
-            this.prof.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(0)))), ((int)(((byte)(139)))));
-            this.prof.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.prof.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.prof.Location = new System.Drawing.Point(727, 105);
-            this.prof.Name = "prof";
-            this.prof.Size = new System.Drawing.Size(85, 19);
-            this.prof.TabIndex = 29;
-            this.prof.Text = "--/--/----";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(0)))), ((int)(((byte)(139)))));
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(727, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 17);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "PROFILACTICAS";
             // 
             // vac1
             // 
@@ -273,13 +235,23 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.button8.Enabled = false;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
+            this.button8.Location = new System.Drawing.Point(4, 146);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(373, 336);
+            this.button8.TabIndex = 20;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // thirdcustomcontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.prof);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.vac1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.incapacidad);
@@ -318,15 +290,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button8;
         public System.Windows.Forms.Label permiso;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label incapacidad;
-        private System.Windows.Forms.Label prof;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label vac1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button9;
         public MetroFramework.Controls.MetroComboBox userCmb;
+        private System.Windows.Forms.Button button8;
     }
 }

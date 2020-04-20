@@ -128,7 +128,6 @@ namespace FastFoodDemo
                 double xi = (f2 - f1).TotalDays;
                 for (int i = 0; i <= xi; i++)
                 {
-
                     DateTime date1 = f1;
                     DateTime data2 = date1.AddDays(0 + i);
                     Telerik.WinControls.UI.RadCalendarDay day = new Telerik.WinControls.UI.RadCalendarDay(data2);

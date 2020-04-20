@@ -96,7 +96,7 @@ namespace FastFoodDemo
             if (bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Ordinaria'") == false)
             {
                 vac1.Text = "--/--/----";
-                prof.Text = "--/--/----";
+                
             }
             else
             {
@@ -117,38 +117,6 @@ namespace FastFoodDemo
                     radCalendar1.ElementRender += radCalendar1_ElementRender;
                 }
                 //Ordinaria END
-
-                //Profilactica START
-
-                if (Mantenimiento.lookerSt("select TieneProfilactica from Empleado where IDEmpleado =" + xd + "") == "SI")
-                {
-                    if (bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica'") == false)
-                    {
-                        MessageBox.Show("No tiene vacaciones profilacticas asignadas");
-                        prof.Text = "--/--/----";
-                    }
-                    else
-                    {
-                        pro1 = DateTime.Parse(Mantenimiento.lookerSt("select top 1 Inicio from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica' order by IDVac desc"));
-                        pro2 = DateTime.Parse(Mantenimiento.lookerSt("select top 1 Final from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica' order by IDVac desc"));
-                        prof.Text = pro1.ToString("dd-MM-yyyy") + " - " + pro2.ToString("dd-MM-yyyy");
-                    }
-
-                }
-
-                double xr = (pro2 - pro1).TotalDays;
-                for (int i = 0; i <= xr; i++)
-                {
-
-                    DateTime date1 = pro1;
-                    DateTime data2 = date1.AddDays(0 + i);
-                    Telerik.WinControls.UI.RadCalendarDay day = new Telerik.WinControls.UI.RadCalendarDay(data2);
-                    radCalendar1.SpecialDays.Add(day);
-
-                    radCalendar1.ElementRender += radCalendar1_ElementRender;
-                }
-
-                //Profilactica END
 
                 radCalendar1.FocusedDate = f1;
             }

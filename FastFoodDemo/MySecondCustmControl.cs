@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
+using System.Data.SqlClient;
 
 namespace FastFoodDemo
 {
@@ -18,6 +19,7 @@ namespace FastFoodDemo
         public DateTime pro1;
         public DateTime pro2;
         public DateTime datapro;
+        public DateTime dateconv;
 
         public int xd;
         public MySecondCustmControl()
@@ -78,14 +80,36 @@ namespace FastFoodDemo
         public void updater()
         {
             Cursor.Current = Cursors.WaitCursor;
-            
+
+            //Convenios Start
+            conveniosTXT.Text = "";
+
+            xd = Mantenimiento.returnInt("SELECT [IDEmpleado] FROM [Empleado] where [Nombre] ='" + enfCmb.Text + "'");
+
+            SqlDataReader Lect;
+
+            using (SqlConnection Cone = Conexion.generarConexion())
+            {
+                Cone.Open();
+                SqlCommand comando = new SqlCommand("SELECT top 10 FechaInicio FROM Convenio where IDEmpleado = " + xd + "and month(FechaInicio) = month(GETDATE()) order by FechaInicio DESC", Cone);
+
+                Lect = comando.ExecuteReader();
+
+                while (Lect.Read())
+                {
+                    dateconv = DateTime.Parse(Lect["FechaInicio"].ToString());
+                    conveniosTXT.Text += dateconv.ToString("dd-MM-yyyy hh:mm tt") + "\n";
+                }
+                Cone.Close();
+            }
+            //ConveniosEnd
+
             //CalendarReset
             for (int i = radCalendar1.SpecialDays.Count - 1; i >= 0; i--)
             {
                 radCalendar1.SpecialDays.Remove(radCalendar1.SpecialDays[i]);
             }
 
-            xd = Mantenimiento.returnInt("SELECT [IDEmpleado] FROM [Empleado] where [Nombre] ='" + enfCmb.Text + "'");
 
             //Counters
             permiso.Text = Mantenimiento.lookerSt("select count(IDpermiso) from Permiso where month(FechaInicio) = month(getdate()) and year(FechaInicio) = year(getdate()) and  IDEmpleado =" + xd + "");
@@ -93,9 +117,8 @@ namespace FastFoodDemo
 
             //CalendarPainter
             Mantenimiento bol = new Mantenimiento();
-            if(bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Ordinaria'") ==false)
+            if (bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Ordinaria'") == false)
             {
-                //MessageBox.Show("No tiene vacaciones ordinarias asignadas");
                 vac1.Text = "--/--/----";
                 prof.Text = "--/--/----";
             }
@@ -109,7 +132,6 @@ namespace FastFoodDemo
                 double xi = (f2 - f1).TotalDays;
                 for (int i = 0; i <= xi; i++)
                 {
-
                     DateTime date1 = f1;
                     DateTime data2 = date1.AddDays(0 + i);
                     Telerik.WinControls.UI.RadCalendarDay day = new Telerik.WinControls.UI.RadCalendarDay(data2);
@@ -125,7 +147,7 @@ namespace FastFoodDemo
                 {
                     if (bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica'") == false)
                     {
-                        MessageBox.Show("No tiene vacaciones profilacticas asignadas");
+                        //MessageBox.Show("No tiene vacaciones profilacticas asignadas");
                         prof.Text = "--/--/----";
                     }
                     else
@@ -134,7 +156,7 @@ namespace FastFoodDemo
                         pro2 = DateTime.Parse(Mantenimiento.lookerSt("select top 1 Final from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica' order by IDVac desc"));
                         prof.Text = pro1.ToString("dd-MM-yyyy") + " - " + pro2.ToString("dd-MM-yyyy");
                     }
-                    
+
                 }
 
                 double xr = (pro2 - pro1).TotalDays;
@@ -151,7 +173,7 @@ namespace FastFoodDemo
 
                 //Profilactica END
 
-                radCalendar1.FocusedDate = f1;  
+                radCalendar1.FocusedDate = f1;
             }
 
             Cursor.Current = Cursors.Default;
