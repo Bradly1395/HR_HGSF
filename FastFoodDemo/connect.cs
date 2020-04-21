@@ -10,7 +10,7 @@ namespace FastFoodDemo
 {
     class connect
     {
-        //public string cadenaconexion = ("Data Source=DATACENTER\\TECHNOTEL;Initial Catalog=SSSM;User ID=sa;Password=Admin2012");
+        
         public string cadenaconexion = ("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=hrsf;Integrated Security=True;Trusted_Connection=True;");
         public string sql;
         public int resultado;
@@ -20,6 +20,7 @@ namespace FastFoodDemo
         public string mensaje;
         public SqlDataAdapter da;
         public DataTable dt;
+        public string x;
 
         public connect()
         {
@@ -29,6 +30,16 @@ namespace FastFoodDemo
         public string Mensaje
         {
             get { return this.mensaje; }
+        }
+
+        public void SetConection(string DataSource, string Catalog, string userbase, string password)
+        {
+            RecursoHumano.Properties.Settings.Default.DataSource = DataSource;
+            RecursoHumano.Properties.Settings.Default.Catalog = Catalog;
+            RecursoHumano.Properties.Settings.Default.PassBase = password;
+            RecursoHumano.Properties.Settings.Default.UserBase = userbase;
+            RecursoHumano.Properties.Settings.Default.Save();
+            x = ("Data Source=" + RecursoHumano.Properties.Settings.Default.DataSource + ";Initial Catalog=" + RecursoHumano.Properties.Settings.Default.Catalog + ";User ID=" + RecursoHumano.Properties.Settings.Default.UserBase+"; Password ="+ RecursoHumano.Properties.Settings.Default.PassBase);
         }
     }
 }

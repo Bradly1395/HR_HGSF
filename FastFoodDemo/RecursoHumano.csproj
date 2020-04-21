@@ -75,6 +75,12 @@
     <Compile Include="ConvenioEnf.Designer.cs">
       <DependentUpon>ConvenioEnf.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB.Designer.cs">
+      <DependentUpon>DB.cs</DependentUpon>
+    </Compile>
     <Compile Include="FirstCustomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     </Compile>
     <Compile Include="Convenio.Designer.cs">
       <DependentUpon>Convenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="passDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="passDB.Designer.cs">
+      <DependentUpon>passDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Permisos3.cs">
       <SubType>Form</SubType>
@@ -183,6 +195,9 @@
     <EmbeddedResource Include="ConvenioEnf.resx">
       <DependentUpon>ConvenioEnf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DB.resx">
+      <DependentUpon>DB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FirstCustomControl.resx">
       <DependentUpon>FirstCustomControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Convenio.resx">
       <DependentUpon>Convenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="passDB.resx">
+      <DependentUpon>passDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Permisos3.resx">
       <DependentUpon>Permisos3.cs</DependentUpon>

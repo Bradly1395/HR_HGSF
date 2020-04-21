@@ -22,5 +22,53 @@ namespace RecursoHumano.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DataSource {
+            get {
+                return ((string)(this["DataSource"]));
+            }
+            set {
+                this["DataSource"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Catalog {
+            get {
+                return ((string)(this["Catalog"]));
+            }
+            set {
+                this["Catalog"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserBase {
+            get {
+                return ((string)(this["UserBase"]));
+            }
+            set {
+                this["UserBase"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PassBase {
+            get {
+                return ((string)(this["PassBase"]));
+            }
+            set {
+                this["PassBase"] = value;
+            }
+        }
     }
 }

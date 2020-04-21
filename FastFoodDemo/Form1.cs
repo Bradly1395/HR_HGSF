@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecursoHumano;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,8 +34,6 @@ namespace FastFoodDemo
             SidePanel.Top = button2.Top;
             mySecondCustmControl1.BringToFront();
 
-            //Thanks for watching Friends...
-            //Please dont forget to Subscribe... :) :) :) 
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -67,6 +66,17 @@ namespace FastFoodDemo
         private void button4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            passDB x = new passDB();
+            x.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

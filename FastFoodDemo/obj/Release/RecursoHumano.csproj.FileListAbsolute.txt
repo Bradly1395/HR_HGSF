@@ -46,3 +46,6 @@ C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Release\RecursoHumano.exe.licen
 C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Release\RecursoHumano.csproj.CopyComplete
 C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Release\RecursoHumano.exe
 C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Release\RecursoHumano.pdb
+C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Release\RecursoHumano.csprojAssemblyReference.cache
+C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Release\RecursoHumano.DB.resources
+C:\Users\Bradly\Desktop\HR_HGSF\FastFoodDemo\obj\Release\RecursoHumano.passDB.resources
