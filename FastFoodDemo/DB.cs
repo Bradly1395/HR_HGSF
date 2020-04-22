@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FastFoodDemo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,10 @@ namespace RecursoHumano
 
         private void DB_Load(object sender, EventArgs e)
         {
-            
+            bd.Text = RecursoHumano.Properties.Settings.Default.DataSource;
+            cat.Text = RecursoHumano.Properties.Settings.Default.Catalog;
+            pass.Text = RecursoHumano.Properties.Settings.Default.PassBase;
+            user.Text = RecursoHumano.Properties.Settings.Default.UserBase;
         }
 
         private void cox_CheckedChanged(object sender, EventArgs e)
@@ -39,6 +43,19 @@ namespace RecursoHumano
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            connect c = new connect();
+            c.SetConection(bd.Text, cat.Text, user.Text, pass.Text, cox.Checked);
+            MessageBox.Show(c.cadenaconexion);
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

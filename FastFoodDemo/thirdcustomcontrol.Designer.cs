@@ -228,7 +228,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(428, 3);
+            this.button9.Location = new System.Drawing.Point(428, 4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(28, 28);
             this.button9.TabIndex = 30;

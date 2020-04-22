@@ -26,7 +26,16 @@ namespace FastFoodDemo
         {
             InitializeComponent();
             Mantenimiento man = new Mantenimiento();
-            man.llenarEnf(enfCmb);
+            try
+            {
+                man.llenarEnf(enfCmb);
+                enfCmb.SelectedIndex = 0;
+            }
+            catch (SqlException ex)
+            {
+
+            }
+
         }
 
         private void radCalendar1_SelectionChanged(object sender, EventArgs e)
@@ -36,7 +45,7 @@ namespace FastFoodDemo
 
         private void MySecondCustmControl_Load(object sender, EventArgs e)
         {
-            enfCmb.SelectedIndex = 0;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

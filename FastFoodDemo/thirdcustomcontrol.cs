@@ -26,12 +26,21 @@ namespace FastFoodDemo
             InitializeComponent();
 
             Mantenimiento man = new Mantenimiento();
-            man.llenarUser(userCmb);
+            try
+            {
+                man.llenarUser(userCmb);
+                userCmb.SelectedIndex = 0;
+            }
+            catch (SqlException ex)
+            {
+
+            }
+            
         }
 
         private void thirdcustomcontrol_Load(object sender, EventArgs e)
         {
-            userCmb.SelectedIndex = 0;
+            
         }
 
         void radCalendar1_ElementRender(object sender, RenderElementEventArgs e)

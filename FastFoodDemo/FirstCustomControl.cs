@@ -28,7 +28,16 @@ namespace FastFoodDemo
             InitializeComponent();
 
             Mantenimiento man = new Mantenimiento();
-            man.llenarDoc(docCmb);
+            try
+            {
+                man.llenarDoc(docCmb);
+                docCmb.SelectedIndex = 0;
+            }
+            catch (SqlException ex)
+            {
+                
+            }
+            //man.llenarDoc(docCmb);
         }
 
         void radCalendar1_ElementRender(object sender, RenderElementEventArgs e)
@@ -65,7 +74,7 @@ namespace FastFoodDemo
 
         private void FirstCustomControl_Load(object sender, EventArgs e)
         {
-            docCmb.SelectedIndex = 0;
+            
         }
 
         private void docCmb_SelectedIndexChanged(object sender, EventArgs e)
