@@ -86,7 +86,7 @@ namespace FastFoodDemo
         {
             Cursor.Current = Cursors.WaitCursor;
 
-            //Convenios Start
+            //Convenios Start**********
             conveniosTXT.Text = "";
 
             xd = Mantenimiento.returnInt("SELECT [IDEmpleado] FROM [Empleado] where [Nombre] ='" + docCmb.Text + "'");
@@ -107,7 +107,7 @@ namespace FastFoodDemo
                 }
                 Cone.Close();
             }
-            //ConveniosEnd
+            //ConveniosEnd***********
 
             //CalendarReset
             for (int i = radCalendar1.SpecialDays.Count - 1; i >= 0; i--)
@@ -126,6 +126,13 @@ namespace FastFoodDemo
             {
                 vac1.Text = "--/--/----";
                 prof.Text = "--/--/----";
+                if (bol.Buscar("select * from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica'") == true)
+                {
+                    vac1.Text = "--/--/----";
+                    pro1 = DateTime.Parse(Mantenimiento.lookerSt("select top 1 Inicio from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica' order by IDVac desc"));
+                    pro2 = DateTime.Parse(Mantenimiento.lookerSt("select top 1 Final from Vacaciones where IDEmpleado =" + xd + " and TipoVacacion = 'Profilactica' order by IDVac desc"));
+                    prof.Text = pro1.ToString("dd-MM-yyyy") + " - " + pro2.ToString("dd-MM-yyyy");
+                }
             }
             else
             {
