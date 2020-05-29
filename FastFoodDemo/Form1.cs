@@ -121,5 +121,17 @@ namespace FastFoodDemo
             if (dataObj != null)
                 Clipboard.SetDataObject(dataObj);
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AgregarEmpleado emp = new AgregarEmpleado();
+            emp.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SelectorEdit sel = new SelectorEdit();
+            sel.ShowDialog();
+        }
     }
 }

@@ -50,6 +50,8 @@
             this.mySecondCustmControl1 = new FastFoodDemo.MySecondCustmControl();
             this.firstCustomControl1 = new FastFoodDemo.FirstCustomControl();
             this.thirdcustomcontrol1 = new FastFoodDemo.thirdcustomcontrol();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -276,7 +278,7 @@
             this.gridAdmin.EnableHeadersVisualStyles = false;
             this.gridAdmin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridAdmin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridAdmin.Location = new System.Drawing.Point(793, 32);
+            this.gridAdmin.Location = new System.Drawing.Point(393, 16);
             this.gridAdmin.Name = "gridAdmin";
             this.gridAdmin.ReadOnly = true;
             this.gridAdmin.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -291,7 +293,7 @@
             this.gridAdmin.RowHeadersVisible = false;
             this.gridAdmin.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridAdmin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridAdmin.Size = new System.Drawing.Size(180, 77);
+            this.gridAdmin.Size = new System.Drawing.Size(10, 10);
             this.gridAdmin.TabIndex = 12;
             this.gridAdmin.Visible = false;
             // 
@@ -317,6 +319,42 @@
             this.thirdcustomcontrol1.Size = new System.Drawing.Size(975, 500);
             this.thirdcustomcontrol1.TabIndex = 7;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(782, 52);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(197, 54);
+            this.button7.TabIndex = 13;
+            this.button7.Text = " Agregar  Empleado";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(579, 52);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(197, 54);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "Editar Empleado";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +363,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1194, 631);
             this.ControlBox = false;
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.gridAdmin);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
@@ -369,6 +409,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private MetroFramework.Controls.MetroGrid gridAdmin;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 
