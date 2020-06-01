@@ -22,7 +22,11 @@ namespace FastFoodDemo
 
         private void Selector_Load(object sender, EventArgs e)
         {
-
+            var now = DateTime.Now;
+            var startOfMonth = new DateTime(now.Year, now.Month, 1);
+            var lastDayOfMonth = startOfMonth.AddMonths(1).AddDays(-1);
+            fecha1.Value = startOfMonth;
+            fecha2.Value = lastDayOfMonth;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,11 +37,13 @@ namespace FastFoodDemo
 
             Mantenimiento man = new Mantenimiento();
             string query = @"select a.Nombre, a.TipoContrato, a.FechaIngreso, b.Inicio, b.Final, b.TipoVacacion, 
-                            datediff(day, b.Inicio, b.Final) as 'Dias Totales'
+                            datediff(day, b.Inicio, b.Final) as 'Dias Totales', c.Descripcion as TipoEmpleado
                             from Empleado as a
                             left join Vacaciones as b
                             on a.IDEmpleado = b.IDEmpleado
-                            where a.TipoEmpleado = " + type + " and MONTH(b.Inicio) = MONTH(GETDATE()) and year(b.Inicio) = year(GETDATE())";
+							inner join TipoEmpleado c
+							on a.TipoEmpleado = c.IDTipo
+                            where b.Inicio between '"+x1+"' and '"+x2+"'";
             man.cargarDGgeneral(gridAdmin, query);
 
             copyAlltoClipboard();
