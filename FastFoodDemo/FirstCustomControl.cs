@@ -26,7 +26,11 @@ namespace FastFoodDemo
         public FirstCustomControl()
         {
             InitializeComponent();
+            LoadUser();
+        }
 
+        public void LoadUser()
+        {
             Mantenimiento man = new Mantenimiento();
             try
             {
@@ -35,9 +39,8 @@ namespace FastFoodDemo
             }
             catch (SqlException ex)
             {
-                
+
             }
-            //man.llenarDoc(docCmb);
         }
 
         void radCalendar1_ElementRender(object sender, RenderElementEventArgs e)

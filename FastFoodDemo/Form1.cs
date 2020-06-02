@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,7 +58,27 @@ namespace FastFoodDemo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            if (VerificarConexion()==false)
+            {
+                MessageBox.Show("Conexion a SQL invalida");
+            }
+
+        }
+
+        private static bool VerificarConexion()
+        {
+            using (SqlConnection connection = Conexion.generarConexion())
+            {
+                try
+                {
+                    connection.Open();
+                    return true;
+                }
+                catch (SqlException)
+                {
+                    return false;
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -88,38 +109,6 @@ namespace FastFoodDemo
         {
             Reporte rer = new Reporte(type);
             rer.ShowDialog();
-            //Cursor.Current = Cursors.WaitCursor;
-
-            //Mantenimiento man = new Mantenimiento();
-            //string query = @"select a.Nombre, a.TipoContrato, a.FechaIngreso, b.Inicio, b.Final, b.TipoVacacion, 
-            //                datediff(day, b.Inicio, b.Final) as 'Dias Totales'
-            //                from Empleado as a
-            //                left join Vacaciones as b
-            //                on a.IDEmpleado = b.IDEmpleado
-            //                where a.TipoEmpleado = "+type+" and MONTH(b.Inicio) = MONTH(GETDATE()) and year(b.Inicio) = year(GETDATE())";
-            //man.cargarDGgeneral(gridAdmin, query);
-
-            //copyAlltoClipboard();
-            //Microsoft.Office.Interop.Excel.Application xlexcel;
-            //Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
-            //Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
-            //object misValue = System.Reflection.Missing.Value;
-            //xlexcel = new Excel.Application();
-            //xlexcel.Visible = true;
-            //xlWorkBook = xlexcel.Workbooks.Add(misValue);
-            //xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-            //Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
-            //CR.Select();
-            //xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
-            //Cursor.Current = Cursors.Default;
-        }
-
-        private void copyAlltoClipboard()
-        {
-            gridAdmin.SelectAll();
-            DataObject dataObj = gridAdmin.GetClipboardContent();
-            if (dataObj != null)
-                Clipboard.SetDataObject(dataObj);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -132,6 +121,18 @@ namespace FastFoodDemo
         {
             SelectorEdit sel = new SelectorEdit();
             sel.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Desea reiniciar la aplicación?", "Advertencia", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(Application.ExecutablePath);
+                this.Close();
+            }
+
         }
     }
 }
