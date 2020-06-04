@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -47,10 +48,36 @@ namespace RecursoHumano
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             connect c = new connect();
             c.SetConection(bd.Text, cat.Text, user.Text, pass.Text, cox.Checked);
-            MessageBox.Show(c.cadenaconexion);
-            this.Close();
+            
+            if (!VerificarConexion())
+                MessageBox.Show("Conexion no Valida");
+            else
+            {
+                MessageBox.Show(c.cadenaconexion);
+                this.Close();
+            }
+                
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        private static bool VerificarConexion()
+        {
+            using (SqlConnection connection = Conexion.generarConexion())
+            {
+                try
+                {
+                    connection.Open();
+                    return true;
+                }
+                catch (SqlException)
+                {
+                    return false;
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
