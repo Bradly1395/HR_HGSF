@@ -50,9 +50,29 @@ namespace FastFoodDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            permiso2 x = new permiso2(this);
-            x.nombre.Text = enfCmb.Text;
-            x.Show();
+  
+            if (Int32.Parse(permiso.Text) >= 3)
+            {
+                DialogResult dialogResult = MessageBox.Show("Este empleado ya tiene 3 permisos o mas.¿Desea continuar?", "Advertencia", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    permiso2 x = new permiso2(this);
+                    x.nombre.Text = enfCmb.Text;
+                    x.Show();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+            }
+            else
+            {
+                permiso2 x = new permiso2(this);
+                x.nombre.Text = enfCmb.Text;
+                x.Show();
+            }
+
         }
 
         void radCalendar1_ElementRender(object sender, RenderElementEventArgs e)
