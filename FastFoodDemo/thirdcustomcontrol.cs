@@ -135,9 +135,27 @@ namespace FastFoodDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            permiso3 x = new permiso3(this);
-            x.nombre.Text = userCmb.Text;
-            x.Show();
+            if (Int32.Parse(permiso.Text) >= 3)
+            {
+                DialogResult dialogResult = MessageBox.Show("Este empleado ya tiene 3 permisos o mas.¿Desea continuar?", "Advertencia", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    permiso3 x = new permiso3(this);
+                    x.nombre.Text = userCmb.Text;
+                    x.Show();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+            }
+            else
+            {
+                permiso3 x = new permiso3(this);
+                x.nombre.Text = userCmb.Text;
+                x.Show();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

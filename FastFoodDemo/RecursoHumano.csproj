@@ -35,8 +35,18 @@
     <ApplicationIcon>hgsfmini_pMB_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MetroFramework">
-      <HintPath>..\..\..\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MetroFramework.dll</HintPath>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,6 +77,12 @@
     <Reference Include="TelerikCommon, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditarEmpleado .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarEmpleado .Designer.cs">
+      <DependentUpon>EditarEmpleado .cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="connect.cs" />
     <Compile Include="ConvenioEnf.cs">
@@ -74,6 +90,11 @@
     </Compile>
     <Compile Include="ConvenioEnf.Designer.cs">
       <DependentUpon>ConvenioEnf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConvenioEnf1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConvenioEnf.resx</DependentUpon>
     </Compile>
     <Compile Include="DB.cs">
       <SubType>Form</SubType>
@@ -93,6 +114,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Incapacidad1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incapacidad.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Incapacidad21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incapacidad2.resx</DependentUpon>
+    </Compile>
     <Compile Include="Incapacidad3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +142,27 @@
     <Compile Include="Convenio.Designer.cs">
       <DependentUpon>Convenio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Incapacidad31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incapacidad3.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MySecondCustmControl1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MySecondCustmControl.resx</DependentUpon>
+    </Compile>
     <Compile Include="passDB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="passDB.Designer.cs">
       <DependentUpon>passDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEmpleado.Designer.cs">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Permisos3.cs">
       <SubType>Form</SubType>
@@ -150,6 +197,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectorEdit.Designer.cs">
+      <DependentUpon>SelectorEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectorUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +233,11 @@
     <Compile Include="thirdcustomcontrol.Designer.cs">
       <DependentUpon>thirdcustomcontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="vacaciones21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vacaciones2.resx</DependentUpon>
+    </Compile>
     <Compile Include="vacaciones3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,8 +256,13 @@
     <Compile Include="vacaciones.Designer.cs">
       <DependentUpon>vacaciones.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditarEmpleado .resx">
+      <DependentUpon>EditarEmpleado .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConvenioEnf.resx">
       <DependentUpon>ConvenioEnf.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConvenioEnf1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DB.resx">
       <DependentUpon>DB.cs</DependentUpon>
@@ -206,15 +275,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Incapacidad3.resx">
       <DependentUpon>Incapacidad3.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Incapacidad31.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Incapacidad2.resx">
       <DependentUpon>Incapacidad2.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Incapacidad21.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Convenio.resx">
       <DependentUpon>Convenio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="passDB.resx">
       <DependentUpon>passDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarEmpleado.resx">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Permisos3.resx">
       <DependentUpon>Permisos3.cs</DependentUpon>
@@ -227,9 +303,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Incapacidad.resx">
       <DependentUpon>Incapacidad.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Incapacidad1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MySecondCustmControl.resx">
       <DependentUpon>MySecondCustmControl.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MySecondCustmControl1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -242,6 +322,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectorEdit.resx">
+      <DependentUpon>SelectorEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectorUser.resx">
       <DependentUpon>SelectorUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,10 +345,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vacaciones2.resx">
       <DependentUpon>vacaciones2.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>vacaciones21.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="vacaciones.resx">
       <DependentUpon>vacaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
